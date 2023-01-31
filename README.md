@@ -1,12 +1,28 @@
-# bookjs
+# bookjs-legacy
 
-Webclient for booking experiments hosted using [timdrysdale/relay](https://github.com/timdrysdale/relay)
+Webclient for booking experiments hosted using [practable/relay@v0.2.3](https://github.com/practable/relay/releases/tag/v0.2.3)
 
+This version is being kept in a separate repo to support any maintenannce required for our first production system hosted on AWS, which uses a variety of sub-domains
+```
+book.practable.io
+static.practable.io
+assets.practable.io
+relay-access.practable.io
+relay.practable.io
+```
 ![screenshot](./img/screenshot-controls3-booked.jpg)
+
+
+A derivative version for use on new servers that want to access the original AWS system is [practable/nowjs](https://github.com/practable/nowjs).
+This may eventually include some modifications such as permitting booking up to token time boundaries, to support efficient lab usage.
+
+The major new developments are happening [practable/bookjs](https://github.com/practable/bookjs), to work with the new [book server](https://github.com/practable/book) that allows for cancellation, including after a session has started, as well as advance booking with configurable policies.
 
 # Releases
 
-The MVP release was used for Semester Two of Academic Year 2020-2021.
+The MVP release v0.1.0 was used for Semester Two of Academic Year 2020-2021.
+
+Release v0.2.0 (develop branch) upgrades the build tool to vite and supports hosting at sub-paths.
 
 ## Deployment / Local testing
 
